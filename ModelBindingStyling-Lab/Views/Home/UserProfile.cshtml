@@ -4,56 +4,64 @@
     ViewData["Title"] = "J. Doe profile page";
 }
 
-<h1>Profile Page</h1>
+<h1 class="text-center">Profile Page</h1>
 
 <div>
     <h4>UserProfile</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserProfileId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.UserProfileId
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.FullName
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.Email
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.PhoneNumber
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.ImageUrl
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GitHubUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.GitHubUrl
-        </dd>
-        <dt>Skilled Languages</dt>
-        <dd>
-            <ul>
-                @foreach(string languageSkill in Model.SkilledLanguages)
-                {
-                    <li>@languageSkill</li>
-                }
-            </ul>
-        </dd>
-    </dl>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <dl class="row">
+                <dt class="col-sm-4 text-nowrap">
+                    @Html.DisplayNameFor(model => model.UserProfileId)
+                </dt>
+                <dd class="col-sm-8">
+                    @Model.UserProfileId
+                </dd>
+                <dt class="col-sm-4 text-nowrap">
+                    @Html.DisplayNameFor(model => model.FullName)
+                </dt>
+                <dd class="col-sm-8">
+                    @Model.FullName
+                </dd>
+                <dt class="col-sm-4 text-nowrap">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-8">
+                    @Model.Email
+                </dd>
+                <dt class="col-sm-4 text-nowrap">
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+                <dd class="col-sm-8">
+                    @Model.PhoneNumber
+                </dd>
+                <dt class="col-sm-4 text-nowrap">
+                    @Html.DisplayNameFor(model => model.ImageUrl)
+                </dt>
+                <dd class="col-sm-8">
+                    @Model.ImageUrl
+                </dd>
+                <dt class="col-sm-4 text-nowrap">
+                    @Html.DisplayNameFor(model => model.GitHubUrl)
+                </dt>
+                <dd class="col-sm-8">
+                    @Model.GitHubUrl
+                </dd>
+            </dl>
+        </div>
+        <div class="col-md-4">
+            <dl>
+                <dt>Skilled Languages</dt>
+                <dd>
+                    <ul class="list-group" style="list-style-type: square;">
+                        @foreach (string languageSkill in Model.SkilledLanguages)
+                        {
+                            <li>@languageSkill</li>
+                        }
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
 </div>
